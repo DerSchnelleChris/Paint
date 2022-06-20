@@ -1,5 +1,6 @@
 package com.processing;
 import processing.core.*;
+import com.processing.Picker;
 
 public class P4int extends PApplet {
 
@@ -11,8 +12,10 @@ public class P4int extends PApplet {
 
     public void setup() {
         Picker.picken();
+    }
 
-
+    public void reset(){
+        background(255,0,0);
     }
 
 
@@ -23,8 +26,9 @@ public class P4int extends PApplet {
 
     public void draw() {
         if (mousePressed) {
-
+            stroke(Picker.col.getRed(), Picker.col.getGreen(), Picker.col.getBlue());
             line(mouseX, mouseY, pmouseX, pmouseY);
+
 
         }
 

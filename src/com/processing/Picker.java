@@ -9,8 +9,8 @@ public class Picker extends JFrame{
     private JPanel mainPicker;
     private JButton farbwahl;
     private JButton stiftwahl;
-    private JButton testButton;
-    Color col;
+    private JButton resetButton;
+    public static Color col = Color.BLACK;
 
 
 
@@ -18,9 +18,8 @@ public class Picker extends JFrame{
         farbwahl.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Color col = JColorChooser.showDialog(null, "Farbauswahl", null);
-                float rgb = col.getRGB();
-                System.out.println(rgb);
+                col = JColorChooser.showDialog(null, "Farbauswahl", null);
+
             }
         });
         stiftwahl.addActionListener(new ActionListener() {
@@ -29,13 +28,20 @@ public class Picker extends JFrame{
 
             }
         });
+        resetButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
     }
 
     public static void picken(){
-        JFrame col = new JFrame("Picker");
+        JFrame frame1 = new JFrame("Picker");
         EventQueue.invokeLater(new Runnable() {
             @Override
             public void run() {
+
 
                 try {
                     Picker colpick = new Picker();
