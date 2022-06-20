@@ -9,6 +9,7 @@ public class Picker extends JFrame{
     private JPanel mainPicker;
     private JButton farbwahl;
     private JButton stiftwahl;
+    private JButton testButton;
     Color col;
 
 
@@ -18,6 +19,8 @@ public class Picker extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 Color col = JColorChooser.showDialog(null, "Farbauswahl", null);
+                float rgb = col.getRGB();
+                System.out.println(rgb);
             }
         });
         stiftwahl.addActionListener(new ActionListener() {

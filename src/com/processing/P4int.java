@@ -22,6 +22,11 @@ public class P4int extends PApplet {
     }
 
     public void draw() {
+        if (mousePressed) {
+
+            line(mouseX, mouseY, pmouseX, pmouseY);
+
+        }
 
     }
 
