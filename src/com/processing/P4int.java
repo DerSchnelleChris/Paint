@@ -11,7 +11,7 @@ public class P4int extends PApplet {
 
     public void setup() {
         Picker.picken();
-        System.out.println("Test");
+
 
     }
 
