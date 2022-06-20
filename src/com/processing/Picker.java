@@ -8,12 +8,19 @@ import java.awt.event.ActionListener;
 public class Picker extends JFrame{
     private JPanel mainPicker;
     private JButton farbwahl;
+    private JButton stiftwahl;
 
     public Picker() {
         farbwahl.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 Color col = JColorChooser.showDialog(null, "Farbauswahl", null);
+            }
+        });
+        stiftwahl.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
             }
         });
     }
