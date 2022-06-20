@@ -16,6 +16,7 @@ public class Picker extends JFrame{
     private JSpinner spinner1;
     public static Color col = Color.BLACK;
     static int sg = 4;
+    public static boolean switcher = true;
 
 
 
@@ -36,7 +37,7 @@ public class Picker extends JFrame{
         resetButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                switcher = false;
             }
 
         });
@@ -60,6 +61,7 @@ public class Picker extends JFrame{
         });
 
     }
+
 
     public static void picken(){
         JFrame frame1 = new JFrame("Picker");
