@@ -4,13 +4,18 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.InputMethodEvent;
+import java.awt.event.InputMethodListener;
 
 public class Picker extends JFrame{
     private JPanel mainPicker;
     private JButton farbwahl;
     private JButton stiftwahl;
     private JButton resetButton;
+    private JButton größeSetzenButton;
+    private JSpinner spinner1;
     public static Color col = Color.BLACK;
+    static int sg = 4;
 
 
 
@@ -33,7 +38,27 @@ public class Picker extends JFrame{
             public void actionPerformed(ActionEvent e) {
 
             }
+
         });
+        größeSetzenButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                sg = (int) spinner1.getValue();
+
+            }
+        });
+        spinner1.addInputMethodListener(new InputMethodListener() {
+            @Override
+            public void inputMethodTextChanged(InputMethodEvent event) {
+
+            }
+
+            @Override
+            public void caretPositionChanged(InputMethodEvent event) {
+
+            }
+        });
+
     }
 
     public static void picken(){

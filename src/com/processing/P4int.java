@@ -26,6 +26,7 @@ public class P4int extends PApplet {
 
     public void draw() {
         if (mousePressed) {
+            strokeWeight(Picker.sg);
             stroke(Picker.col.getRed(), Picker.col.getGreen(), Picker.col.getBlue());
             line(mouseX, mouseY, pmouseX, pmouseY);
 
