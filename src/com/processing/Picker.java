@@ -9,6 +9,9 @@ public class Picker extends JFrame{
     private JPanel mainPicker;
     private JButton farbwahl;
     private JButton stiftwahl;
+    Color col;
+
+
 
     public Picker() {
         farbwahl.addActionListener(new ActionListener() {

@@ -9,8 +9,11 @@ public class P4int extends PApplet {
 
     }
 
+    float maus1, maus2;
     public void setup() {
         Picker.picken();
+        maus1 = mouseX;
+        maus2 = mouseY;
 
 
     }
@@ -22,7 +25,19 @@ public class P4int extends PApplet {
     }
 
     public void draw() {
+        frameRate(500);
+        //stroke(Picker.getColor());
+        strokeWeight(16);
+        line(maus1, maus2, mouseX, mouseY);
+        maus1 = mouseX;
+        maus2 = mouseY;
+
 
     }
+
+
+
+
+
 
 }
