@@ -13,10 +13,18 @@ public class Picker extends JFrame{
     private JButton stiftwahl;
     private JButton resetButton;
     private JButton größeSetzenButton;
+    private JSpinner stiftgroesse;
+    private JButton kreiszeichnen;
+    private JSpinner kreisDm;
+    private JButton quadratzeichnen;
     private JSpinner spinner1;
+    private JButton freiZeichnen;
+    private JButton linieZeichnen;
     public static Color col = Color.BLACK;
     static int sg = 4;
+    static int dm = 0;
     public static boolean switcher = true;
+    static int form = 1;
 
 
 
@@ -37,18 +45,20 @@ public class Picker extends JFrame{
         resetButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                switcher = false;
+
+                form = 2;
+
             }
 
         });
         größeSetzenButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                sg = (int) spinner1.getValue();
+                sg = (int) stiftgroesse.getValue();
 
             }
         });
-        spinner1.addInputMethodListener(new InputMethodListener() {
+        stiftgroesse.addInputMethodListener(new InputMethodListener() {
             @Override
             public void inputMethodTextChanged(InputMethodEvent event) {
 
@@ -60,6 +70,31 @@ public class Picker extends JFrame{
             }
         });
 
+        kreiszeichnen.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dm = (int) kreisDm.getValue();
+                form = 3;
+
+            }
+        });
+        kreisDm.addInputMethodListener(new InputMethodListener() {
+            @Override
+            public void inputMethodTextChanged(InputMethodEvent event) {
+
+            }
+
+            @Override
+            public void caretPositionChanged(InputMethodEvent event) {
+
+            }
+        });
+        freiZeichnen.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                form = 1;
+            }
+        });
     }
 
 

@@ -28,15 +28,24 @@ public class P4int extends PApplet {
     }
 
     public void draw() {
-        if (mousePressed) {
-            strokeWeight(Picker.sg);
-            stroke(Picker.col.getRed(), Picker.col.getGreen(), Picker.col.getBlue());
-            line(mouseX, mouseY, pmouseX, pmouseY);
-        }
 
-        if(!Picker.switcher) {
-            reset();
-            Picker.switcher=true;
+        switch (Picker.form) {
+            case 1: if (mousePressed) {
+                strokeWeight(Picker.sg);
+                stroke(Picker.col.getRed(), Picker.col.getGreen(), Picker.col.getBlue());
+                line(mouseX, mouseY, pmouseX, pmouseY);
+                }
+                break;
+            case 2: reset();
+                    Picker.switcher=true;
+                    break;
+            case 3: if (mousePressed) {
+                    fill(Picker.col.getRed(), Picker.col.getGreen(), Picker.col.getBlue());
+                    circle(mouseX, mouseY, Picker.dm);}
+                    break;
+            default: break;
+
+
         }
 
     }
