@@ -17,12 +17,15 @@ public class Picker extends JFrame{
     private JButton kreiszeichnen;
     private JSpinner kreisDm;
     private JButton quadratzeichnen;
-    private JSpinner spinner1;
+    private JSpinner rechteckBreite;
     private JButton freiZeichnen;
     private JButton linieZeichnen;
+    private JSpinner rechteckHöhe;
     public static Color col = Color.BLACK;
     static int sg = 4;
     static int dm = 0;
+    static int breite = 0;
+    static int hoehe = 0;
     public static boolean switcher = true;
     static int form = 1;
 
@@ -93,6 +96,25 @@ public class Picker extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 form = 1;
+            }
+        });
+        quadratzeichnen.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                breite = (int) rechteckBreite.getValue();
+                hoehe = (int) rechteckHöhe.getValue();
+                form = 4;
+            }
+        });
+        rechteckBreite.addInputMethodListener(new InputMethodListener() {
+            @Override
+            public void inputMethodTextChanged(InputMethodEvent event) {
+
+            }
+
+            @Override
+            public void caretPositionChanged(InputMethodEvent event) {
+
             }
         });
     }

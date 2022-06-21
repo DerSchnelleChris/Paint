@@ -43,6 +43,10 @@ public class P4int extends PApplet {
                     fill(Picker.col.getRed(), Picker.col.getGreen(), Picker.col.getBlue());
                     circle(mouseX, mouseY, Picker.dm);}
                     break;
+            case 4: if (mousePressed) {
+                fill(Picker.col.getRed(), Picker.col.getGreen(), Picker.col.getBlue());
+                rect(mouseX, mouseY, Picker.breite, Picker.hoehe);}
+                break;
             default: break;
 
 
