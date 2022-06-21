@@ -19,6 +19,8 @@ public class P4int extends PApplet {
 
     public void reset(){
         background(192,192,192);
+
+
     }
 
 
@@ -38,6 +40,7 @@ public class P4int extends PApplet {
                 break;
             case 2: reset();
                     Picker.switcher=true;
+                    Picker.form = Picker.formAlt;
                     break;
             case 3: if (mousePressed) {
                     fill(Picker.col.getRed(), Picker.col.getGreen(), Picker.col.getBlue());

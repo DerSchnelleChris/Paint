@@ -28,6 +28,7 @@ public class Picker extends JFrame{
     static int hoehe = 0;
     public static boolean switcher = true;
     static int form = 1;
+    static int formAlt;
 
 
 
@@ -48,8 +49,9 @@ public class Picker extends JFrame{
         resetButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                formAlt = form;
                 form = 2;
+
 
             }
 
