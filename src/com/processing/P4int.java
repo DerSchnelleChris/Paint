@@ -1,14 +1,15 @@
 package com.processing;
 import processing.core.*;
-import com.processing.Picker;
-
 import java.awt.*;
+import java.util.ArrayList;
 
 public class P4int extends PApplet {
 
     Color bg = new Color(192, 192, 192);
     float x , y, a, b;
     int clickCount = -1;
+    static boolean weiter = true;
+    ArrayList<PVector> points = new ArrayList<PVector>();
 
     public static void main(String[] args) {
         PApplet.main("com.processing.P4int");
@@ -21,6 +22,7 @@ public class P4int extends PApplet {
     }
 
     public void reset(){
+        loop();
         background(bg.getRed(), bg.getGreen(), bg.getBlue());
     }
 
@@ -39,7 +41,7 @@ public class P4int extends PApplet {
                 }
                 break;
             case 2: reset();
-                    Picker.switcher=true;
+                    //Picker.switcher=true;
                     Picker.form = Picker.formAlt;
                     break;
             case 3: if (mousePressed) {
@@ -59,16 +61,8 @@ public class P4int extends PApplet {
                 }
                 break;
             case 6:
-                noLoop();
-                if(clickCount % 2 == 0) {
-                    a = x;
-                    b = y;
-                    clickCount += 1;
-                }
-                else {
-                    clickCount += 1;
-                }
-                mouseReleased(a, b, x, y);
+
+
                 break;
             case 7:
                 setBg();
@@ -82,16 +76,18 @@ public class P4int extends PApplet {
 
     }
 
-    private void mouseReleased(float x, float y, float c, float d) {
-        strokeWeight(Picker.sg);
-        stroke(Picker.col.getRed(), Picker.col.getGreen(), Picker.col.getBlue());
-        line(x,y, c, d);
+    public void mouseReleased() {
+        if (Picker.form == 6) {
+            strokeWeight(Picker.sg);
+            line(x, y, mouseX, mouseY);
+        }
     }
 
     public void mousePressed(){
-        this.x = mouseX;
-        this.y = mouseY;
-        loop();
+        if (Picker.form == 6) {
+            x = mouseX;
+            y = mouseY;
+        }
     }
 
 

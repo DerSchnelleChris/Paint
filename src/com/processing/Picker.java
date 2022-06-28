@@ -130,6 +130,7 @@ public class Picker extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 form = 6;
+
             }
         });
         setHintergrund.addActionListener(new ActionListener() {
