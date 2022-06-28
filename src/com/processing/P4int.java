@@ -6,10 +6,9 @@ import java.util.ArrayList;
 public class P4int extends PApplet {
 
     Color bg = new Color(192, 192, 192);
-    float x , y, a, b;
-    int clickCount = -1;
-    static boolean weiter = true;
-    ArrayList<PVector> points = new ArrayList<PVector>();
+    float x , y;
+
+
 
     public static void main(String[] args) {
         PApplet.main("com.processing.P4int");
