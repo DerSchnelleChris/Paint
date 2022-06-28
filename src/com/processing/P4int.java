@@ -59,7 +59,6 @@ public class P4int extends PApplet {
                 }
                 break;
             case 6:
-                System.out.println("Lol");
 
                 break;
             case 7:
