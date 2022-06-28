@@ -70,6 +70,11 @@ public class P4int extends PApplet {
                 }
                 mouseReleased(a, b, x, y);
                 break;
+            case 7:
+                setBg();
+                background(Picker.col.getRed(), Picker.col.getGreen(), Picker.col.getBlue());
+                Picker.form = Picker.formAlt;
+                break;
             default: break;
 
 
@@ -89,4 +94,8 @@ public class P4int extends PApplet {
         loop();
     }
 
+
+    public void setBg(){
+        bg = new Color (Picker.col.getRed(), Picker.col.getGreen(), Picker.col.getBlue());
+    }
 }

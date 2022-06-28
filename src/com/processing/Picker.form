@@ -53,14 +53,6 @@
         </constraints>
         <properties/>
       </component>
-      <component id="f8c31" class="javax.swing.JButton" binding="größeSetzenButton" default-binding="true">
-        <constraints>
-          <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="Größe setzen"/>
-        </properties>
-      </component>
       <component id="35717" class="javax.swing.JSpinner" binding="stiftgroesse">
         <constraints>
           <grid row="8" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
@@ -129,6 +121,22 @@
         </constraints>
         <properties>
           <text value="Linie"/>
+        </properties>
+      </component>
+      <component id="f8c31" class="javax.swing.JButton" binding="größeSetzenButton" default-binding="true">
+        <constraints>
+          <grid row="8" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Größe setzen"/>
+        </properties>
+      </component>
+      <component id="663e8" class="javax.swing.JButton" binding="setHintergrund">
+        <constraints>
+          <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Set Hintergrund"/>
         </properties>
       </component>
     </children>

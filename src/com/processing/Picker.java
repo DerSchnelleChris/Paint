@@ -22,6 +22,7 @@ public class Picker extends JFrame{
     private JButton radieren;
     private JSpinner rechteckHöhe;
     private JButton linie;
+    private JButton setHintergrund;
     public static Color col = Color.BLACK;
     static int sg=4;
     static int dm = 0;
@@ -38,7 +39,6 @@ public class Picker extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 col = JColorChooser.showDialog(null, "Farbauswahl", null);
-
             }
         });
         stiftwahl.addActionListener(new ActionListener() {
@@ -130,6 +130,13 @@ public class Picker extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 form = 6;
+            }
+        });
+        setHintergrund.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                formAlt = form;
+                form = 7;
             }
         });
     }
