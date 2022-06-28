@@ -19,10 +19,11 @@ public class Picker extends JFrame{
     private JButton quadratzeichnen;
     private JSpinner rechteckBreite;
     private JButton freiZeichnen;
-    private JButton linieZeichnen;
+    private JButton radieren;
     private JSpinner rechteckHöhe;
+    private JButton linie;
     public static Color col = Color.BLACK;
-    static int sg = 4;
+    static int sg=4;
     static int dm = 0;
     static int breite = 0;
     static int hoehe = 0;
@@ -117,6 +118,18 @@ public class Picker extends JFrame{
             @Override
             public void caretPositionChanged(InputMethodEvent event) {
 
+            }
+        });
+        radieren.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                form = 5;
+            }
+        });
+        linie.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                form = 6;
             }
         });
     }
