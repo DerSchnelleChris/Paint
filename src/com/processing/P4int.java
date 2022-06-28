@@ -40,7 +40,6 @@ public class P4int extends PApplet {
                 }
                 break;
             case 2: reset();
-                    //Picker.switcher=true;
                     Picker.form = Picker.formAlt;
                     break;
             case 3: if (mousePressed) {
