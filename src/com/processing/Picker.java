@@ -41,12 +41,7 @@ public class Picker extends JFrame{
                 col = JColorChooser.showDialog(null, "Farbauswahl", null);
             }
         });
-        stiftwahl.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
 
-            }
-        });
         resetButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
